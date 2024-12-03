@@ -16,7 +16,3 @@ services:
     restart: unless-stopped
     environment:
       - SNAPSHOT_URL=https://snapshots.fibos123.com/latest.bin
-    deploy:
-      restart_policy:
-        condition: any
-        delay: 5s
