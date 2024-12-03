@@ -1,12 +1,17 @@
 # fibos-node-v5
 
-## 同步节点
-```bash
-cp .env.sample .env
-docker-compose up -d
+```base
+git clone https://github.com/mingfunwong/fibos-node-v5.git
+cd fibos-node-v5
 ```
 
-## BP节点
+## CASE: 同步节点
+```bash
+cp .env.sample .env
+sudo docker-compose up -d
+```
+
+## CASE: BP节点
 ```bash
 cp .env.sample .env
 vi .env
@@ -19,5 +24,5 @@ PRODUCER_PUBLIC_KEY=FO6*****************CV # BP 公钥
 ```
 
 ```bash
-docker-compose up -d
+sudo docker-compose up -d
 ```
