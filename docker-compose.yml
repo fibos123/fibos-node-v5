@@ -1,0 +1,21 @@
+services:
+  node-server:
+    image: tpblock/fibos-node:v5.0.1.0
+    volumes:
+      - ./fibos-node/data:/node/data
+      - ./resources:/app/resources
+      - ./start-snapshot.sh:/app/start-snapshot.sh
+    ports:
+      - "8080:8870"
+      - "9870:9870"
+    env_file:
+      - ./.env
+    entrypoint: [ "sh", "/app/start-snapshot.sh" ]
+    command: [ "node" ]
+    restart: unless-stopped
+    environment:
+      - SNAPSHOT_URL=https://snapshots.fibos123.com/latest.bin
+    deploy:
+      restart_policy:
+        condition: any
+        delay: 5s
