@@ -1,7 +1,7 @@
 # fibos-node-v5
 
 ```base
-git clone https://github.com/mingfunwong/fibos-node-v5.git
+git clone https://github.com/fibos123/fibos-node-v5.git
 cd fibos-node-v5
 ```
 
