@@ -7,7 +7,6 @@ services:
       - ./fibos-node/data:/node/data
       - ./resources:/app/resources
       - ./start-snapshot.sh:/app/start-snapshot.sh
-      - ./index.js:/app/index.js
     ports:
       - "8080:8870"
       - "9870:9870"
